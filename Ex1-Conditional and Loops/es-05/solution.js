@@ -1,9 +1,3 @@
-const ceoSalary = calculateSalary('ceo');
-const managerSalary = calculateSalary('manager');
-const ctoSalary = calculateSalary('cto');
-const developerSalary = calculateSalary('developer');
-const otherSalary = calculateSalary('other');
-
 function calculateSalary(role) {
     switch(role) {
         case "ceo":
@@ -17,6 +11,12 @@ function calculateSalary(role) {
             return 1000;
     }
 }
+
+const ceoSalary = calculateSalary('ceo');
+const managerSalary = calculateSalary('manager');
+const ctoSalary = calculateSalary('cto');
+const developerSalary = calculateSalary('developer');
+const otherSalary = calculateSalary('other');
 
 console.log(ceoSalary);
 console.log(managerSalary);

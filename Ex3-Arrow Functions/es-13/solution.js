@@ -8,4 +8,6 @@ const divide = (a,b) => a/b;
 
 const log = value => value;
 
-console.log (((2 + 4) * (5 + 2) - 2) / 5);
+let result = divide(subtract(multiply(sum(2, 4),sum(5, 2)),2), 5);
+
+console.log(result);

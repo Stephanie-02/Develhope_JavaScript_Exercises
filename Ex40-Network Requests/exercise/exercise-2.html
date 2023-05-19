@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script src="solution.js" defer>
+  // code here
+  const URL = "https://jsonplaceholder.typicode.com/todos/4";
+
+  const container = document.querySelector("#container");
+
+  async function getData() {
+      const response = await fetch(URL);
+      const jsonData = response.json();
+      return jsonData;
+  }
+
+  function renderData(data) {
+      for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+        
+          const h2Tag = document.createElement("h2");
+          h2Tag.innerHTML = element.title;
+          const inputTag = document.createElement("input");
+          inputTag.type = "checkbox";
+          inputTag.checked = element.completed;
+
+          divTag.append(h2Tag);
+          divTag.append(inputTag);
+          container.append(divTag);
+      }
+  }
+</script>

@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo"></button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  async function postData() {
+    const postObject = {
+      title: "This is the title",
+      completed: true
+    };
+  }
+
+  const respone = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {"Content-Type": "application/ json"},
+    body: JSON.stringify(postObject)
+  });
+
+  const data = await response.json();
+  
+</script>
